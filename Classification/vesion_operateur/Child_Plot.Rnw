@@ -1,0 +1,10 @@
+<<optionspng, echo=FALSE,out.width='4in',fig.align='center'>>=
+plot(rocs, col = as.list(1:m), main = "Test Set ROC Curves")
+legend(x = "bottomright", 
+       legend = c("Decision Tree", "Bagged Trees", "Random Forest", "GBM","XGB","ANN","KNN","glm"),
+       fill = 1:m,
+       cex = 1)
+
+
+@
+ 
