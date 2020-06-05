@@ -1,0 +1,18 @@
+<<options, echo=FALSE>>=
+print(c)
+
+
+@
+
+
+\Sexpr{
+xtable(df_result) 
+}
+
+\Sexpr{
+setwd(dirname(getwd()))
+print(getwd())
+
+knitr::knit_child('Child_Plot.RnW')
+
+}

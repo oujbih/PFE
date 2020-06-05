@@ -1,0 +1,526 @@
+
+%------------------------Begin Code Latex -------------------------------
+\documentclass[a4paper, 11pt]{report}
+\input{Latex/preamble}
+% premiere page
+\newcommand{\Annee}{2019}
+\newcommand{\Mois}{Février}
+\newcommand{\version}{01/01/2019}
+% deuxieme page 
+\newcommand{\variation}{jan.2018/jan. 2019}
+\newcommand{\AfinP}{jan.18}
+\newcommand{\AfinD}{jan.19}
+\usepackage{pgffor}
+\begin{document}
+
+<<include=FALSE>>=
+library(knitr)
+opts_chunk$set(
+concordance=TRUE
+)
+@
+
+%-------------------------------------page de Grade--------------------------------------
+\input{Latex/Page_de_garde}
+\newpage
+%-------------------------------------Fin page  Grade--------------------------------------
+\chapter{Les Fines Classification }
+
+%----- entre deux SDP------------------------------------------------------------------------------------------ 
+
+\newpage
+\section{Fines Jointure SDP Mean entre deux SDP}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c) %<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%----
+\newpage
+\section{Fines Jointure SDP Max entre deux SDP}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%---
+\newpage
+\section{Fines Jointure SDP Median entre deux SDP}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%----------60----------------------------------------------------------------------------------------------
+\newpage
+\section{Fines Jointure SDP Mean 60 minutes}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%-------
+\newpage
+\section{Fines Jointure SDP Max 60 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%-----
+\newpage
+\section{Fines Jointure SDP Median 60 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%----------10-----------------------------------------------------------------------------------------------
+\newpage
+\section{Fines Jointure SDP Mean 10 minutes}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%------
+\newpage
+\section{Fines Jointure SDP Max 10 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%----
+\newpage
+\section{Fines Jointure SDP Median 10 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%-------------------------------------Correction  --------------------------------------
+\newpage
+\begin{figure}[h!]
+	\centering
+
+	\includegraphics[width=\linewidth]{Latex/image/image1.png}
+	\includegraphics[width=\linewidth]{Latex/image/image2.png}
+	\caption{Correction de la dilution du hopper 19 }
+\end{figure} 
+
+%----- entre deux SDP----------------
+
+\newpage
+\section{Fines Jointure SDP Mean entre deux SDP}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%----
+\newpage
+\section{Fines Jointure SDP Max entre deux SDP}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%---
+\newpage
+\section{Fines Jointure SDP Median entre deux SDP}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%----------60----------------------------------------------------------------------------------------------
+\newpage
+\section{Fines Jointure SDP Mean 60 minutes}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%-------
+\newpage
+\section{Fines Jointure SDP Max 60 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%-----
+\newpage
+\section{Fines Jointure SDP Median 60 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%----------10-----------------------------------------------------------------------------------------------
+\newpage
+\section{Fines Jointure SDP Mean 10 minutes}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%------
+\newpage
+\section{Fines Jointure SDP Max 10 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%----
+\newpage
+\section{Fines Jointure SDP Median 10 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+
+
+%Gros -------------------------------------------------
+%------------------------------------------------------
+\newpage
+%-------------------------------------Fin page  Grade--------------------------------------
+\chapter{Les Gros Classification }
+
+%----- entre deux SDP------------------------------------------------------------------------------------------ 
+
+\newpage
+\section{Gros Jointure SDP Mean entre deux SDP}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%----
+\newpage
+\section{Gros Jointure SDP Max entre deux SDP}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%---
+\newpage
+\section{Gros Jointure SDP Median entre deux SDP}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%----------60----------------------------------------------------------------------------------------------
+\newpage
+\section{Gros Jointure SDP Mean 60 minutes}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%-------
+\newpage
+\section{Gros Jointure SDP Max 60 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%-----
+\newpage
+\section{Gros Jointure SDP Median 60 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%----------10-----------------------------------------------------------------------------------------------
+\newpage
+\section{Gros Jointure SDP Mean 10 minutes}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%------
+\newpage
+\section{Gros Jointure SDP Max 10 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%----
+\newpage
+\section{Gros Jointure SDP Median 10 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="ncorrected",input_formula = NULL,input_sortie="X40µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%-------------------------------------Correction  --------------------------------------
+\newpage
+\begin{figure}[h!]
+	\centering
+
+	\includegraphics[width=\linewidth]{Latex/image/image1.png}
+	\includegraphics[width=\linewidth]{Latex/image/image2.png}
+	\caption{Correction de la dilution du hopper 19 }
+\end{figure} 
+
+
+
+\newpage
+\section{Gros Jointure SDP Mean entre deux SDP}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%----
+\newpage
+\section{Gros Jointure SDP Max entre deux SDP}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%---
+\newpage
+\section{Gros Jointure SDP Median entre deux SDP}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =60,par_hours = F,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%----------60----------------------------------------------------------------------------------------------
+\newpage
+\section{Gros Jointure SDP Mean 60 minutes}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%-------
+\newpage
+\section{Gros Jointure SDP Max 60 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%-----
+\newpage
+\section{Gros Jointure SDP Median 60 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =60,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%----------10-----------------------------------------------------------------------------------------------
+\newpage
+\section{Gros Jointure SDP Mean 10 minutes}
+
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="mean",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+%------
+\newpage
+\section{Gros Jointure SDP Max 10 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="max",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+%----
+\newpage
+\section{Gros Jointure SDP Median 10 minutes}
+\Sexpr{
+setwd(dirname(getwd()))
+c(df_result,rocs,m,c)%<-% F_Main_HG(dataframe ="corrected",input_formula = NULL,input_sortie="X250µm",
+                             input_var_merge ="SDP sans CPT" ,regle_jointure_value="mean",regle_jointure_value2="median",
+                             a_hours =10,par_hours = T,k_spilt=0.7 )
+options(knitr.duplicate.label = "allow")
+knitr::knit_child('Child.RnW')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
