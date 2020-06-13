@@ -1,0 +1,8 @@
+
+
+for(c in colnames(input_test[3:ncol(input_test)])){
+  print(input_test[[c]])
+}
+
+
+model_1_pred <- predict(object = model_1,newdata = input_test) 

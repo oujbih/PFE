@@ -1,0 +1,38 @@
+#home
+tabItem("Home",
+        fluidRow(
+          column( class="side_bar",
+                  width = 3,
+                  
+                  selectInput("Inputs", "Inputs",choices =c(colnames(Model_data)),selected ="Débit_CV004", width = "90%"),
+                  selectInput("Inputs2", "Inputs2",choices =c(colnames(Model_data)),selected ="Débit_CV004", width = "90%"),
+                  checkboxInput("checkbox", label = "Fonction densité", value = FALSE),
+                  sliderInput(
+                    "gaugeVal",
+                    "Gauge Value:",
+                    min = 0,
+                    max = 100,
+                    value = 50
+                  )
+          ),
+          column(class="main_bar",
+                 width = 9,
+                 
+                 tablerCard(
+                   title = "Evolutions",
+                   
+                   plotOutput("plot1",width = "100%"),
+                   plotOutput("plot11",width = "100%"),
+                   plotOutput("plot2",width = "100%"),
+                   width = 12,
+                   overflow = F
+                 )
+                 
+          )
+        ) #fin row 
+)#fin model
+
+
+
+
+

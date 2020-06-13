@@ -1,0 +1,4 @@
+<<optionspng, echo=FALSE,out.width='4in',fig.align='center'>>=
+print(plot_max)
+@
+ 

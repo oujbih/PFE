@@ -1,0 +1,24 @@
+{
+    "id": "8F7F3A21",
+    "path": "C:/Users/OUJBIH/Desktop/Stage PFE/R/Dashborad/version0.3/app.R",
+    "project_path": "app.R",
+    "type": "r_source",
+    "hash": "1635949283",
+    "contents": "",
+    "dirty": false,
+    "created": 1592012686886.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "cursorPosition": "744,0",
+        "scrollLine": "728"
+    },
+    "folds": "20|9|83|2|\n85|9|151|2|\n152|21|219|2|\n379|21|402|2|\n403|14|458|4|\n459|9|474|2|\n498|37|501|2|\n503|35|558|4|\n560|35|588|2|\n596|43|604|5|\n605|40|620|5|\n621|43|629|5|\n630|40|645|5|\n650|40|697|6|\n",
+    "lastKnownWriteTime": 1592021510,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1592021510200,
+    "read_only": false,
+    "read_only_alternatives": []
+}
