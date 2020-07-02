@@ -1,7 +1,6 @@
 # PFE
 OCP Beni AMIR
-## Data Analytics pour la Caractérisation et Optimisation du processus de valorisation du phosphate de la Laverie de Beni-Amir
-
+##  Modélisation et Amélioration de la Performance de la Ligne High Grade à la Laverie Beni Amir
 
 *Dashbord* 
 
