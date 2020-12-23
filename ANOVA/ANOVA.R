@@ -55,3 +55,11 @@ anova(modele)
 summary(modele)
 TukeyHSD(modele) 
 plot(modele)
+
+
+# ressources
+# https://en.wikipedia.org/wiki/Analysis_of_variance
+# https://www.scribbr.com/statistics/anova-in-r/
+# http://www.sthda.com/english/wiki/one-way-anova-test-in-r
+# https://www.guru99.com/r-anova-tutorial.html
+
