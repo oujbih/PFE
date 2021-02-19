@@ -4,7 +4,7 @@ OCP Beni AMIR
 
 >oujbih abderrahim abderahimoujbih@gmail.com
 
-*Dashbord* 
+*Dashboard* 
 
 
 
